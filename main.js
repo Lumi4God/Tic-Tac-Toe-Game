@@ -6,6 +6,10 @@ const error = document.querySelector('#error');
 document.querySelector('#btn1').addEventListener("click",machineVshuman);
 document.querySelector('#btn3').addEventListener("click",humanVshuman);
 
+// Sound on the button whenever it's clicked
+var bleep = new Audio();
+bleep.src = 'ding-sound-effect/mixkit-game.wav';
+
 const game = {
   currentPlayer: "",
   mode:"",
