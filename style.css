@@ -10,6 +10,7 @@
   
   body {
     font-size: 1.6rem;
+    background: skyblue;
   }
   
   .boardContainer {
@@ -54,24 +55,42 @@
 
   .info1{
       display: flexbox;
-      border: 1px black solid;
+      border: 0px black solid;
       width: 255px;
       height: 55px;
+      margin-left: 2px;
   }
-  button{
+  #btn1{
       background: rgb(129, 202, 55);
       font-weight: bold;
+      border: 2px black solid;
+      border-radius: 5px;
+      box-shadow: 0.2rem 0.2rem grey;
   }
-  button:hover{
+  #btn3{
+    background: black;
+    color: white;
+    font-weight: bold;
+    border: 2px black solid;
+    border-radius: 5px;
+    box-shadow: 0.2rem 0.2rem grey;
+}
+  #btn1:hover{
       background: black;
-      color: rgb(119, 230, 8);
+      color: rgb(129, 202, 55);
   }
+  #btn3:hover{
+    background: rgb(129, 202, 55);
+    color: rgb(214, 14, 64);
+}
 
   .info2{
     display: flexbox;
     border: 1px black solid;
-    width: 255px;
+    width: 220px;
     height: 70px;
+    margin-left: 10px;
+    padding-left: 10px;
 }
   
   .board{
