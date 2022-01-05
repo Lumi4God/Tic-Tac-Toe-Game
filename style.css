@@ -87,6 +87,7 @@
   .info2{
     display: flexbox;
     border: 1px black solid;
+    border-radius: 10px;
     width: 220px;
     height: 70px;
     margin-left: 10px;
