@@ -104,6 +104,9 @@
     background-color: black;
     grid-gap: 3px;
     background: burlywood;
+    border: 2px solid rgb(230, 175, 103);
+    box-shadow: 0 1rem 0.9rem 3rem rgb(35 135 165);
+    border-radius: 5px;
   }
   
   .square{
