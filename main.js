@@ -9,6 +9,10 @@ document.querySelector('#btn3').addEventListener("click",humanVshuman);
 // Sound on the button whenever it's clicked
 var bleep = new Audio();
 bleep.src = 'ding-sound-effect/mixkit-game.wav';
+////////////////////////////////////////////////
+// Sound on the button whenever it's clicked
+var bleep2 = new Audio();
+bleep2.src = 'ding-sound-effect/mixkit-arcade-game-jump-coin-216.wav';
 
 const game = {
   currentPlayer: "",
