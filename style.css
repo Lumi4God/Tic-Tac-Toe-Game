@@ -11,6 +11,10 @@
   body {
     font-size: 1.6rem;
     background: skyblue;
+    transition: background 0.2s linear;
+  }
+  body.dark {
+    background: #f58787;
   }
   
   .boardContainer {
@@ -57,7 +61,7 @@
       display: flexbox;
       border: 0px black solid;
       width: 255px;
-      height: 55px;
+      height: 60px;
       margin-left: 2px;
   }
   #btn1{
@@ -89,13 +93,14 @@
     border: 1px black solid;
     border-radius: 10px;
     width: 220px;
-    height: 70px;
+    height: 100px;
     margin-left: 10px;
     padding-left: 10px;
 }
   
   .board{
     min-height: 40rem;
+    max-height: 73rem;
     position: absolute;
     inset: 0;
     display: grid;
@@ -107,6 +112,11 @@
     border: 2px solid rgb(230, 175, 103);
     box-shadow: 0 1rem 0.9rem 3rem rgb(35 135 165);
     border-radius: 5px;
+  }
+  @media screen and (min-width: 100px) and (max-width: 950px){
+    .board{
+      margin-top: 3rem;
+    }
   }
   
   .square{
@@ -164,6 +174,56 @@
       position: fixed;
       bottom: 0px;
       width: 100%;
+  }
+
+  /* Changing the body/root color (switch) */
+
+  .checkbox {
+    opacity: 0;
+    position: absolute;
+  }
+  
+  .label {
+    background-color: #111;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    top: 5px;
+    left: 10px;
+    height: 18px;
+    width: 48px;
+    transform: scale(1.5);
+  }
+  
+  .label .ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    height: 15px;
+    width: 15px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+  }
+  
+  .checkbox:checked + .label .ball {
+    transform: translateX(24px);
+  }
+  
+  
+  .fa-moon {
+    color: #f1c40f;
+    font-size: 10px;
+  }
+  
+  .fa-sun {
+    color: #f39c12;
+    font-size: 10px;
   }
   
   

@@ -6,6 +6,15 @@ const error = document.querySelector('#error');
 document.querySelector('#btn1').addEventListener("click",machineVshuman);
 document.querySelector('#btn3').addEventListener("click",humanVshuman);
 
+/////////////////////////////////////////////
+// the body color switch button
+const chk = document.getElementById('chk');
+
+chk.addEventListener('change', () => {
+	document.body.classList.toggle('dark');
+});
+
+/////////////////////////////////////////////
 // Sound on the button whenever it's clicked
 var bleep = new Audio();
 bleep.src = 'ding-sound-effect/mixkit-game.wav';
