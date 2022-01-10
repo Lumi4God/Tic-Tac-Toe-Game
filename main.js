@@ -10,9 +10,13 @@ document.querySelector('#btn3').addEventListener("click",humanVshuman);
 var bleep = new Audio();
 bleep.src = 'ding-sound-effect/mixkit-game.wav';
 ////////////////////////////////////////////////
-// Sound on the button whenever it's clicked
+// Sound on the board whenever players play
 var bleep2 = new Audio();
 bleep2.src = 'ding-sound-effect/mixkit-arcade-game-jump-coin-216.wav';
+/////////////////////////////////////////////////
+// Sound on whenever player 1 wins
+var bleep3 = new Audio();
+bleep3.src = 'ding-sound-effect/jubilant-fanfare.mp3';
 
 const game = {
   currentPlayer: "",
@@ -109,6 +113,7 @@ function updateScore () {
 }
 
 function displayWinMessage () {
+  bleep3.play() // Sound of player 1 
   alert(`${this.currentPlayer === 'p1' ? 'player 1' : this.currentPlayer === 'p2' ? 'player 2' : 'machine'} has won!`)
 }
 
